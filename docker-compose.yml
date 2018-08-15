@@ -13,7 +13,7 @@ services:
             - php
 
     php:
-        image: cyberduck/php-fpm-laravel:7.2
+        image: bitnami/php-fpm
         expose:
             - 9000
         volumes:

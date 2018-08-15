@@ -1,24 +1,22 @@
 <?php
-/**
- * Created by: William Tahira Rabaldeli Santos
- * Company: 2mundos.net
- * Date: 13/08/18
- * Time: 19:33
- */
 
-$postinho = $_POST;
+?>
 
-include_once "Usuario.php";
+<html>
+<h1>cadastro de troxas</h1>
 
-$cu = new Usuario();
-
-$cu->guardaSaporraToda('seila@gmail.com', 123456789, 'wiuu');
-
-$cu->mostraSaporraToda();
-
-$paulo = new Usuario();
-
-$paulo->guardaSaporraToda('paulot@troxa.com.br', '123456', 'cudeburro');
-
-$paulo->mostraSaporraToda();
+<form method="post" name="postinho" action="Cadastrar.php">
+    <label>Nome</label>
+    <input type="text" name="nome" /><br>
+    <label>Sobrenome</label>
+    <input type="text" name="sobrenome" /><br>
+    <label>Senha</label>
+    <input type="password" name="senha" /><br>
+    <label>Email</label>
+    <input type="text" name="email" /><br>
+    <label>Username</label>
+    <input type="text" name="username" /><br>
+    <input type="submit" value="enviar" /><br>
+</form>
+</html>
 
