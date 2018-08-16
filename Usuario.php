@@ -25,9 +25,9 @@ class Usuario
     /**
      * @param mixed $nome
      */
-    public function setNome($nome): void
+    public function setNome($qualquernome): void
     {
-        $this->nome = $nome;
+        $this->nome = $qualquernome;
     }
 
     /**
