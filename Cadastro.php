@@ -11,9 +11,7 @@ include_once "ConectarNoBanco.php";
 
 class Cadastro
 {
-        private $parametros = array();
-
-        private $novoUsuario;
+        private $parametros;
 
         public function __construct($postdoform)
         {
@@ -57,6 +55,26 @@ class Cadastro
             ));
 
             echo "funfo karaioooooo";
+        }
+
+        public function selecionaDoBanco($email)
+        {
+            $conexao = new ConectarNoBanco();
+            $pdo = $conexao->openConnection();
+
+            $sql = 'SELECT * FROM
+                    usuariosfodase
+                    WHERE 
+                    email=:email';
+
+            $stmt = $pdo->prepare($sql);
+            $stmt->execute(array(
+                ':email' => $email,
+            ));
+            $oquebuscqueidobanco = $stmt->fetchAll();
+            var_dump($oquebuscqueidobanco);
+            exit;
+            return $oquebuscqueidobanco;
         }
 }
 

@@ -5,7 +5,7 @@
 <html>
 <h1>cadastro de troxas</h1>
 
-<form method="post" name="postinho" action="Cadastrar.php">
+<form method="post" name="postinho" action="Controller.php">
     <label>Nome</label>
     <input type="text" name="nome" /><br>
     <label>Sobrenome</label>
