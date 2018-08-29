@@ -42,5 +42,34 @@ class AutenticacaoModel
         return $dados['username'];
     }
 
+    public function pegaUsuario($dados)
+    {
+
+        $pdo = $this->conexao->openConnection();
+
+        $query = '
+            SELECT * FROM 
+            usuariosfodase
+            WHERE 
+            (
+            email=:emailusername
+            OR 
+            username=:emailusername
+            )
+            AND 
+            senha=:senha
+        ';
+
+        $stmt = $pdo->prepare($query);
+
+        $stmt->execute(array(
+            ':emailusername' => $dados['emailusername'],
+            ':senha' => md5($dados['senha'])
+        ));
+        $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        return $users;
+    }
+
 
 }
