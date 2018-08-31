@@ -2,23 +2,21 @@
 /**
  * Created by: William Tahira Rabaldeli Santos
  * Company: 2mundos.net
- * Date: 13/08/18
- * Time: 19:33
+ * Date: 31/08/18
+ * Time: 19:27 
  */
-
-$postinho = $_POST;
 
 include_once "Usuario.php";
 
-$cu = new Usuario();
+$variavelqualquer = new Usuario(); //instancia
 
-$cu->guardaSaporraToda('seila@gmail.com', 123456789, 'wiuu');
+$variavelqualquer->guardarEmail("william@seila.com.br");
+$variavelqualquer->guardarSenha('12345');
+//$variavelqualquer->mostraOsqueeuTenho();
 
-$cu->mostraSaporraToda();
+echo '<br><br>';
 
-$paulo = new Usuario();
-
-$paulo->guardaSaporraToda('paulot@troxa.com.br', '123456', 'cudeburro');
-
-$paulo->mostraSaporraToda();
-
+//$variavelqualquer = new Usuario();
+$variavelqualquer->guardarSenha('123456789');
+$variavelqualquer->guardarEmail('hermand@email.com');
+$variavelqualquer->mostraOsqueeuTenho();

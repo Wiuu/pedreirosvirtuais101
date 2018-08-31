@@ -2,27 +2,29 @@
 /**
  * Created by: William Tahira Rabaldeli Santos
  * Company: 2mundos.net
- * Date: 13/08/18
- * Time: 20:03
+ * Date: 31/08/18
+ * Time: 19:29
  */
 
 class Usuario
 {
+
     private $email;
-    private $senha;
-    private $username;
+    private $cu;
 
-    public function guardaSaporraToda($em, $sen, $user)
+    public function guardarSenha($umDadoDigitadoQualquer)
     {
-        $this->username = $user;
-        $this->email = $em;
-        $this->senha = $sen;
+        $this->cu = $umDadoDigitadoQualquer;
     }
 
-    public function mostraSaporraToda()
+    public function guardarEmail($umDadoDigitadoQualquer2)
     {
-        echo $this->username. "<br>";
-        echo $this->email. "<br>";
-        echo $this->senha. "<br>";
+        $this->email = $umDadoDigitadoQualquer2;
     }
+
+    public function mostraOsqueeuTenho()
+    {
+       echo 'esse sao os dados:'. $this->email.' e '. $this->cu;
+    }
+
 }
