@@ -1,15 +1,14 @@
 <?php
-session_start();
-var_dump(session_id());
-exit;
-    if(empty(session_id())) {
-        $fodase = urlencode("você nao ta logado, pilantra");
-        echo '
-        <script>
-        window.location.href = "http://localhost/index.php?area=login&message='.$fodase.'";
-        </script>
-        ';
-    }
+
+//
+//    if(empty(session_id())) {
+//        $fodase = urlencode("você nao ta logado, pilantra");
+//        echo '
+//        <script>
+//        window.location.href = "http://localhost/index.php?area=login&message='.$fodase.'";
+//        </script>
+//        ';
+//    }
 ?>
 
 <section id="contact">
