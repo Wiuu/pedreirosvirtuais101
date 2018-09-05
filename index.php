@@ -1,4 +1,5 @@
 <?php
+session_start();
 $argumentos = $_GET;
 
 include_once "Views/partes/cabecalho.php";

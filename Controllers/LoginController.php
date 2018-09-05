@@ -1,4 +1,5 @@
 <?php
+session_start();
 /**
  * Created by: William Tahira Rabaldeli Santos
  * Company: 2mundos.net
@@ -28,8 +29,6 @@ $teste = new LoginController($_POST);
 $retorno = $teste->pegaUsuarioeAutentica();
 
 if (count($retorno) > 0) {
-
-    session_start();
     $_SESSION['id'] = $retorno[0]['id'];
     $_SESSION['nome'] = $retorno[0]['nome'];
     $_SESSION['sobrenome'] = $retorno[0]['sobrenome'];
