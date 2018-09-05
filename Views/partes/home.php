@@ -11,18 +11,37 @@
 //    }
 ?>
 
+<!-- Contact Section -->
 <section id="contact">
-<div class="container">
-    <h2 class="text-center text-uppercase text-secondary mb-0">LOGO MIZERAVII!!!</h2>
-    <hr class="star-dark mb-5">
-    <div class="row">
-        <div class="col-lg-8 mx-auto">
-
-<div class="alert alert-success" role="alert">
-    PARABENS OTAAAARIO!
-</div>
-
+    <div class="container">
+        <h2 class="text-center text-uppercase text-secondary mb-0">Register yourself Asshole!!!</h2>
+        <hr class="star-dark mb-5">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                <form name="sentMessage" id="contactForm" novalidate="novalidate" method="post" action="Controllers/NoticiaController.php">
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Name</label>
+                            <input class="form-control" id="titulo" name="titulo" type="text" placeholder="Titulo" required="required" data-validation-required-message="Please enter your title.">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
+                            <label>Name</label>
+                            <textarea class="form-control" id="texto" name="texto" type="text" placeholder="Texto" required="required" data-validation-required-message="Please enter your text">
+                            </textarea>
+                                <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-xl" >Send</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-</div>
 </section>
