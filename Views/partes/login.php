@@ -1,7 +1,6 @@
 <!-- Contact Section -->
 <section id="contact">
     <?php
-
     $message = $_GET['message'];
     if (!empty($message)) {
 

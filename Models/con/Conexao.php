@@ -8,7 +8,7 @@
 
 class Conexao
 {
-    private $servername = "172.21.0.2";
+    private $servername = "172.18.0.2";
     private $username = "root";
     private $password = "root";
     private $database = "tournament";
