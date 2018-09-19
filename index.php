@@ -1,6 +1,22 @@
 <?php
 $argumentos = $_GET;
 
+$rotasLivres = array(
+    'index',
+    'registro',
+    'login',
+    'home'
+)
+
+    $rotasRestritas = array(
+        'postar'
+    )
+
+if (!empty($SESSION['id'])){
+    $tudo = array_merge($rotasLivres, $rotasRestritas);
+
+}
+
 include_once "Views/partes/cabecalho.php";
 
 if (!empty($argumentos['area'])) {
