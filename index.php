@@ -6,11 +6,13 @@ $rotasLivres = array(
     'index',
     'registro',
     'login',
-    'home'
+    'home',
+    'postar'
 );
 
 $rotasRestritas = array(
-    'postar'
+    'postar',
+    'seila'
 );
 
 //ESSE IF VERIFICA A SESSAO LOGADA
@@ -23,6 +25,7 @@ if (!empty($_SESSION['id'])) {
         //CAIU AQUI TA TUDO CORRETO
         include_once "Views/partes/cabecalho_logado.php";
     } else {
+        include_once "Views/partes/cabecalho.php";
         //CAIU AQUI A ROTA NAO EXISTE
         include_once "Views/partes/404.php";
     }
