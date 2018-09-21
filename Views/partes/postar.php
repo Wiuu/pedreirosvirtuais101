@@ -1,3 +1,9 @@
+<?php
+session_start();
+
+include_once "/var/www/html/Controllers/CategoriaController.php";
+?>
+
 <!-- Contact Section -->
 <section id="contact">
     <div class="container">
@@ -12,8 +18,24 @@
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
                             <label>Name</label>
                             <input class="form-control" id="titulo" name="titulo" type="text" placeholder="Titulo da noticia" required="required" data-validation-required-message="Please enter your name.">
+                            <input type="hidden" name="autor" value="<?php echo $_SESSION['id']; ?>" />
+
                             <p class="help-block text-danger"></p>
                         </div>
+                    </div>
+                    <br/>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Escolha a Categoria da Noticia</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="categoria">
+                            <?php
+                            $categoriasBanco = new CategoriaController();
+                            $categorias = $categoriasBanco->pegaCategorias();
+
+                            foreach ($categorias as $categoria) {
+                                echo '<option value="'.$categoria['id'].'">'.$categoria['nome'].'</option>';
+                            }
+                            ?>
+                        </select>
                     </div>
                     <br/>
                     <div class="control-group">
